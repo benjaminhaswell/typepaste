@@ -1,0 +1,165 @@
+/* Author: Ben Haswell */
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap');
+
+body {
+    background-image: linear-gradient(to bottom right, #00979D, #ddfeff);
+    height: 115vh;
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+    text-align: center;
+    font-family: 'Fira Code', monospace;
+
+}
+
+h1 {
+    text-align: center;
+}
+
+#title {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    /* margin-left: 41%; */
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btnBox {
+    display: flex;
+    flex-direction: column;
+    padding: 4%;
+    border-color: black;
+    background-color: white;
+    margin: 1%;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease-in-out;
+    
+    /* Not working yet */
+    font-size: 1.2em;
+}
+
+/* Animation when hovering over boxes */
+.btnBox:hover {
+    transform: scale(1.05); /* Set the scale to enlarge the box */
+}
+
+.popup {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    border-radius: 10px;
+    width: 50vw;
+    height: 25vw;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    text-align: center;
+}
+
+#sentNot {
+    display: none;
+}
+
+#n1, #n2, #n3, #n4 {
+    cursor: default;
+}
+
+button {
+    background-color:#00979D;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    font-size: 16px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: background-color 0.1s ease-in-out;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: #028084;
+    cursor: pointer;
+}
+  
+button:active {
+    background-color: #015356;
+}
+
+title {
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+}
+
+title:after {
+  content: '_';
+  display: inline-block;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% {opacity: 1;}
+  50% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.info-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    position: relative;
+    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+    margin: 0% auto 25px auto;
+    transition: transform 0.2s ease-in-out;
+}
+  
+.info-button:before {
+    content: "i";
+    color:#00979D;
+    font-size: 24px;
+    line-height: 50px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.info-button:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.info {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    border-radius: 10px;
+    width: 50vw;
+    height: 25vw auto;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    text-align: center;
+}

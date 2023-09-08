@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypePaste</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="author" content="Ben Haswell">
+</head>
+<body>
+    <div class="popup" id="myPopup">
+        <h1 id="bindName" contenteditable="true"></h1>
+		<textarea id="textBox" rows="4" cols="50" placeholder="Enter snippet here"></textarea>
+        <br>
+		<button onclick="" id="sentButton">Save</button>
+        <span id="sentMsg" style="color: green; display: none;">Snippet saved!</span>
+        <br>
+        <button onclick="togglePopup()">Close</button>
+	</div>
+
+    <div class="info" id="info">
+        <h1>What is TypePaste?</h1>
+        <p>TypePaste is a keyboard extension you can use to set four Snippets of text, code, or whatever you choose!</p>
+        <p>You set a Snippet, save it, then press the button on the
+            TypePaste Device to paste it to your connected computer!
+        </p>
+        <p>To set a Snippet, simply click the "Edit" button on one of the four Snippets, enter your text (changing the name if you please), then hit save.</p>
+        <button onclick="toggleInfo()">Okay</button>
+    </div>
+
+    <h1 id="title">TypePaste</h1>
+
+    <div class="info-button" onclick="toggleInfo()"></div>
+
+    <div class="container">
+        <div class="row">
+            <div class="btnBox">
+                <h2 id="n1">Snippet 1</h2>
+                <button onclick="togglePopup(1)">Edit</button>
+            </div>
+            <div class="btnBox">
+                <h2 id="n2">Snippet 2</h2>
+                <button onclick="togglePopup(2)">Edit</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="btnBox">
+                <h2 id="n3">Snippet 3</h2>
+                <button onclick="togglePopup(3)">Edit</button>
+            </div>
+            <div class="btnBox">
+                <h2 id="n4">Snippet 4</h2>
+                <button onclick="togglePopup(4)">Edit</button>
+            </div>
+        </div>
+    </div>
+</body>
+    <script src="script.js"></script>
+    <script src="styling.js"></script>
+</html>
